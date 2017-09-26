@@ -1,3 +1,4 @@
 # PruebaGit01
-ming 
+ming y Miguel angel
 me aburro mucho
+yo tambien
