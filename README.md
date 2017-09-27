@@ -1,6 +1,6 @@
 # PruebaGit01
 Ming y Miguel Angel
-En este modulo vamos  dar:
+Vamos a trabajar con muchos lenguajes de programacion en este modulo profesional
 Java
 JavaScript
 PHP
