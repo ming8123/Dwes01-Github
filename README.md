@@ -1,4 +1,6 @@
 # PruebaGit01
-ming y Miguel angel
-me aburro mucho
-yo tambien
+Ming y Miguel Angel
+En este modulo vamos  dar:
+Java
+JavaScript
+PHP
