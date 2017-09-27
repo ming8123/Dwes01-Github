@@ -1,2 +1,6 @@
 # PruebaGit01
-Estamos Dando Java y esto es una rama nueva
+Ming y Miguel Angel
+En este modulo vamos  dar:
+Java
+JavaScript
+PHP
