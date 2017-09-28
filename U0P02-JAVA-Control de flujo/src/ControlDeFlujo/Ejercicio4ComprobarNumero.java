@@ -15,7 +15,7 @@ public class Ejercicio4ComprobarNumero {
 		while (opcion==-1) {
 			try {
 				opcion=sc.nextInt();
-				System.out.println("el numero "+opcion+" introdicido esta bien");
+				System.out.println("el numero "+opcion+" introdicido esta De puta madr machote!!!!");
 				
 			}catch (Exception e) {
 				
