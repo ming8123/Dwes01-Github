@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio3Sumarnumero {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);	
+		Scanner sc=new Scanner(System.in);	//
 		int total=0;
 		System.out.println("introduce numero entero para sumar,maximo 50");
 		int x =sc.nextInt();
