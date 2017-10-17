@@ -1,14 +1,14 @@
 package figuras;
 
-public class Triangulo{
+public class Triangulo extends Figuras{
 
 	private double base;
 	private double altura;
 
-	public Triangulo (double base, double altura) {
+	public Triangulo (String titulo,String color,double base, double altura) {
+		super(titulo, color);
 		this.base=base;
 		this.altura=altura;
-
 	}
 
 	public double getBase() {
@@ -28,7 +28,7 @@ public class Triangulo{
 	}
 
 	public String toString() {
-		return "Triangulo [base=" + base + ", altura=" + altura + "]";
+		return super.toString()+ "Triangulo [base=" + base + ", altura=" + altura + "]";
 	}
 
 	public double area() {
