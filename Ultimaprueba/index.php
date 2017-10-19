@@ -1,4 +1,4 @@
-<?php
+<?php include 'aparte.php';
 
 $nombre1="ming";
 $nombre2="manu";
@@ -74,8 +74,70 @@ echo "<h1> la tercera forma </h1> ";
      }
  }
 
-var_dump($alumno3); 
+ echo "<h1>Array alumno3</h1>";
+ 
+echo "<p>".var_dump($alumno3)."</p>"; 
+echo "<p>";
 print_r($alumno3);
+"</p>";
+echo "<h2>Ordenado de Z-A</h2>";
+rsort($alumno3);
+foreach ($alumno3 as $actual){
+    echo "<li>".$actual."</li>";
+}
  
- 
+"<p>Primera forma</p>"; 
+
+$moviles= array("zing"=>"123456789","Manu"=>"603237125");
+arsort($moviles);
+"<p>Segunda forma</p>"; 
+
+$moviles2["Ming"]=12345678;
+$moviles2["Manu"]=603237125;
+
+echo "<h1>Array moviles</h1>";
+
+echo "<p>";
+print_r($moviles);
+echo "</p>";
+ksort($moviles2);
+echo "<p>".var_dump($moviles2)."</p>";
+
+foreach ($moviles as $persona => $movil){
+    echo "<li>El numero de $persona es $movil</li>";
+}
+
+$m=122222;
+echo "<p>la variable m es ".gettype($m)."</p>";
+echo"<h4>agente de usuario utilizado: ".$_SERVER['HTTP_USER_AGENT']."</h4>";
+
+$manu="tontos";
+$ming=" por dos";
+$sergio=" feos";
+$juan="o no ";
+function tontos($manu,$ming){
+    $resultado="$manu $ming";
+    return  $resultado;
+}
+
+echo tontos($manu, $ming);
+
+
+
+
+function tontos1($manu1,$ming1,$v=FALSE){
+    global $sergio;
+    $resultado=$manu1.' '.$ming1.$sergio.' '.$GLOBALS["juan"];
+  
+    if ($v==true){       
+        return $resultado;
+    }
+}
+
+
+
+echo'<p>'.tontos1($manu1="machote", $ming1="que pasa",$v=true).'</p>';
+
+echo "<p>Estamos a ". date('d-m-y'). " y la son las ". date('h:i'). "</p>";
+
 ?>
