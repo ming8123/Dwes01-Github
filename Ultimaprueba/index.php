@@ -1,4 +1,5 @@
-<?php include 'aparte.php';
+<?php include 'Formulario.php';?>
+<?php
 
 $nombre1="ming";
 $nombre2="manu";
@@ -139,5 +140,28 @@ function tontos1($manu1,$ming1,$v=FALSE){
 echo'<p>'.tontos1($manu1="machote", $ming1="que pasa",$v=true).'</p>';
 
 echo "<p>Estamos a ". date('d-m-y'). " y la son las ". date('h:i'). "</p>";
+echo "<h2>hola".$_POST['nombre']."</h2>";
 
 ?>
+
+<html>
+<body>
+
+<?php
+
+if (!isset($_POST['num'])){
+?>
+<form action="index.php" method="post">
+nombre: <input type="text" name="nombre">
+num:<input type="text" name="num">
+<input type="submit" name="Esnviar">
+</form>
+<?php 
+}
+else {
+    echo "<h1>BIENVENIDO ". $_POST['nombre']. "TONTO</h1>";
+    echo "<p>Tu numero de tonto es el ". $_POST['num']. "</h1>";
+}
+?>
+</body>
+</html>
