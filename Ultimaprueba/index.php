@@ -70,9 +70,12 @@ echo "<h1> la tercera forma </h1> ";
          echo "<p>alumno $y es ".$alumno3[$y].".</p>" ;
          echo " ";
      }  else{
-        
          $c++;
      }
  }
 
+var_dump($alumno3); 
+print_r($alumno3);
+ 
+ 
 ?>
