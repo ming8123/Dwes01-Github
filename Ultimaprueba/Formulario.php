@@ -7,6 +7,7 @@ num:<input type="text" name="num">
 </form>
 
 <?php
+
 echo "<h1>HOLA MUNDO</h1>";
 
 
