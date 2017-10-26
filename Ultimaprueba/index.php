@@ -112,9 +112,9 @@ $m=122222;
 echo "<p>la variable m es ".gettype($m)."</p>";
 echo"<h4>agente de usuario utilizado: ".$_SERVER['HTTP_USER_AGENT']."</h4>";
 
-$manu="tontos";
+$manu="listo";
 $ming=" por dos";
-$sergio=" feos";
+$sergio=" guapo";
 $juan="o no ";
 function tontos($manu,$ming){
     $resultado="$manu $ming";

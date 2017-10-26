@@ -4,7 +4,7 @@
 <form action="ecf-diferencia.php" method="post">
 Introduce A: <input type="number" name="A">
 Introduce B:<input type="number" name="B">
-<input type="submit" name="Esnviar">
+<input type="submit" name="enviar">
 </form>
 <?php
 if(isset($_POST["enviar"])){
@@ -15,11 +15,10 @@ $c=0;
 if($b>$a){    
     $aux=$b;
     $b=$a;
-    $a=$aux;
-        
+    $a=$aux;        
 }
 $c=$b;
-if(($a>0&&$a<11)&&($b>0&&$b<11)){
+if(($a>=0 && $a<=10)&&($b>=0 && $b<=10)){
 while (($a!=$b)){    
     echo "<h8> * </h8>";
     $b++;
@@ -32,5 +31,6 @@ for($b;$b<$a;$b++){
 }else 
     echo "<p1>introduce los datos necesarios</p1>";
 ?>
+<a href="index.php">volver</a>
 </body>
 </html>

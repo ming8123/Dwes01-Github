@@ -30,5 +30,6 @@ while ($c<=strlen($a)){
     echo"<p1>Introduce los datos necesarios</p1>";
     
     ?>
+    <a href="index.php">volver</a>
 </body>
 </html>

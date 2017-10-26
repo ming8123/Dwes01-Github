@@ -18,5 +18,6 @@ echo"<p> $result </p>";
 
 
 ?>
+<a href="index.php">volver</a>
 </body>
 </html>

@@ -21,5 +21,6 @@ if(isset($_POST["Enviar"])){
     echo"<p1>Introduce los datos necesarios</p1>";
     
 ?>
+<a href="index.php">volver</a>
 </body>
 </html>
