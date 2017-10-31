@@ -3,6 +3,7 @@
 <body>
 <form action="maincirculo.php" method="post">
 Introduce radio: <input type="number" name="A">
+
 <input type="submit" name="Enviar">
 </form>
 <?php
@@ -12,6 +13,7 @@ $a=$_POST['A'];
 
 $c1=new circulo($a);
 echo $c1;
+
 
 }else
     echo"<p1>Introduce los datos necesarios</p1>";
