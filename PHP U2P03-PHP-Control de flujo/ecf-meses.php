@@ -9,7 +9,7 @@ no bisiesto<input type="radio"  name="bisiesto"  value="nobisiesto">
 </form>
 <?php
 
-if(!isset($_POST["Enviar"]) && !isset($_POST['A']) &&(!isset($bisiesto)) && (!isset($_POST["enviar"]))){
+if(!isset($_POST["Enviar"]) && !isset($_POST['A'])&& (!isset($_POST["enviar"]))){
     echo"<h1>Rellena los datos anteriores</h1>";        
 }else{    
   $bisiesto=$_POST["bisiesto"];
