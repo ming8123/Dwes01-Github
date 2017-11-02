@@ -1,0 +1,42 @@
+@charset "ISO-8859-1";
+
+//style.css
+
+h1 {
+	
+	color: #DF1010;
+}
+
+ div h1,legend {
+ 
+	font-family:Arial;
+	font-weight: bold;
+	color: #43668D;
+}
+
+div,fieldset {
+	
+	font-family: Courier;
+	color: #39657D;
+	border: 2px solid black;
+	padding: 20px;
+	float: left;
+}
+
+#ejercicio {
+	
+	width: 50%;
+	height: 20%;
+	float: left;
+}
+
+#resultado {
+	
+	margin: 2px;
+	clear: both;
+}
+
+#error {	
+	color: #DF1010;
+	
+}
