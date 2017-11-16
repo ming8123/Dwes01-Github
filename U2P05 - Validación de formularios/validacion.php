@@ -2,18 +2,23 @@
 <head></head>
 <meta charset="UTF-8">
 <link href="../style.css" rel="stylesheet">
+
 <body>
 <?php 
+include'funcion.php';
 $nombre=null;
 $errornombre=null;
+$errorapellido=null;
 $apellido=null;
 $bool=true;
 $pass=null;
+$errorpass=null;
 $min=false;
 $may=false;
 $sim=false;
 
-if ((!isset($_POST['enviar']))||empty($_POST["nombre"])||empty($_POST["apellido1"])){
+
+if ((!isset($_POST['enviar']))){
     echo "<p id='error'>Debes rellanar los datos para darte de alta </p>";
 }
 else{
@@ -21,7 +26,7 @@ else{
     if(ctype_alpha($_POST["nombre"])){
         $nombre=strtoupper($_POST["nombre"]);
     }else {
-       $errornombre="**dato no valido";
+       $errornombre="**Dato no valido";
         $bool=false;
     }
     
@@ -29,41 +34,39 @@ else{
         $apellido=strtoupper($_POST["apellido1"]);
         
     }else {
-        echo "<p id='error'>Apellido1:Datos no valido</p>";
+        $errorapellido="**Datos no valido";
         $bool=false;
         
     }
     if(strlen($_POST["password"])>=8){       
         for($i=0;$i<=strlen($_POST["password"]);$i++){
-            if (ctype_lower($i)){
-                
+            if (ctype_lower($i)){                
                 $min=true;
-            }else   {
-                $bool=false;
-                echo "<p>Falta  minuscula</p>";
-            }
+            } 
             if (ctype_upper($i)){
                 $may=true;
-            }else    {
-                $bool=false;
-                echo "<p>Falta mayuscula</p>";
-                
             }
             if (ctype_punct($i)){
                 $sim=true;
-            }else         $bool=false;
-        }
+            }
+            }
+            
+            if(($may=true)&&($min=true)&&($sim=true)){
+                $pass=$_POST["password"];
+            }else {
+                $errorpass="**Datos no valido";
+                $bool=false;
+            }
     }else {
-        echo "<p id='error'>password:Datos no valido</p>";
+     
         $bool=false;
+        $errorpass="**Datos no valido";
     }
     
 ?>
 
 <?php
-echo "<div id='resultado'>";
-echo"<h1>RESULTADO</h1>";
-
+echo "<p id='resultado'>";
 
     if($bool){
         echo "<p>El nombre de alumno es: ".$nombre."</p>";
@@ -71,15 +74,14 @@ echo"<h1>RESULTADO</h1>";
         echo "<p>la contraeña es validas";
     }  
 }
-echo"</div>";
+echo"</p>";
 ?>
 <form action="validacion.php" method="post">
 <fieldset>
 <legend>validacion.php</legend>
 <p>Introduce nombre: <input type="text" name="nombre" value="<?php  echo $nombre?>"><?php echo "<span id='error'>$errornombre</span>"?><p>
-<p>Introduce primer apellidos: <input type="text" name="apellido1" value="<?php  echo $apellido?>"><p>
-<p>Introduce segundo apellido(opcional): <input type="text" name="apellido2"><p>
-<p>Introduce password: <input type="password" name="password" ><p>
+<p>Introduce primer apellidos: <input type="text" name="apellido1" value="<?php  echo $apellido?>"><?php echo "<span id='error'>$errorapellido</span>"?><p>
+<p>Introduce password: <input type="password" name="password" value="<?php  echo $pass?>" ><?php echo "<span id='error'>$errorpass</span>"?><p>
 <p>Introduce correo: <input type="text" name="correo"><p>
 <p>Introduce fecha de nacimiento: <input type="date" name="fecha"><p>
 <p>Introduce direccion: <input type="text" name="direccion"><p>
