@@ -24,15 +24,18 @@ if ($conexion->connect_errno) {
 </tr>
 <?php 
 
-    $resultado = $conexion -> query("SELECT Nombre_obra,ID_autor FROM obra");
+    $resultado = $conexion -> query("SELECT ID,Nombre_obra,ID_autor FROM obra");
     
     while ($obra = $resultado->fetch_object('Obra')) {        
         echo "<tr  >";
-        echo "<td><a href".$obra->getNombre_obra()."</td>\n";
-        echo "<td>".$obra->getID_autor()."</td>\n";   
+      
+        echo "<td><a href='mostrarObra.php?idObra=".$obra->getID()."'>".$obra->getNombre_obra()."</a></td>\n";  
+
+        echo "<td>".$obra->getID_autor()."</td>\n";
+        
         $id1=$obra->getID_autor();
         $consulta="SELECT Nombre FROM autor where ID="."'$id1'"; 
-        echo $consulta;
+    
         $autor = $conexion -> query($consulta);
         if($autor->num_rows === 0) echo "<p>No se encontró el autor</p>";
         else {

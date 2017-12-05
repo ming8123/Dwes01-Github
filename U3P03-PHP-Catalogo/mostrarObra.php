@@ -20,15 +20,19 @@ if ($conexion->connect_errno) {
 	Nombre de la Obra:<input type="box" name="nombre">
     <input type="submit" name="enviar">
 	</form> 
-<?php 
-if(isset($_POST['enviar'])){
-
-
-    $resultado = $conexion -> query("SELECT ID,Nombre_obra,Genero,ID_autor,Imagen as imagen FROM obra");
+<?php     
     
+    $p=$_REQUEST['idObra'];
+    $prueba="SELECT ID,Nombre_obra,Genero,ID_autor,Imagen as imagen FROM obra where ID="."'$p'";
+    
+    
+    if(isset($_POST['enviar'])){
+        $resultado = $conexion -> query('SELECT ID,Nombre_obra,Genero,ID_autor,Imagen as imagen FROM obra');    
+ 
+  
     while ($obra = $resultado->fetch_object('Obra')) { 
      
-        if($obra->getID()===$_POST['nombre']){
+         if($obra->getID()===$_POST['nombre'] ){
             $vobra=true;
             ?>
             <table bgcolor='lightgreen' border="5" align="left">
@@ -66,6 +70,7 @@ if(isset($_POST['enviar'])){
 
 }
 }
+if()
 ?>
 
 
