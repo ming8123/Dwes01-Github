@@ -1,10 +1,11 @@
 <?php
+session_name('idsession01');
+session_start ();
 
-
-if (!isset($_SESSION['index'])){
+if (!isset($_SESSION['name'])){
     header('location:registro.php');
 }else{
-    echo "<p>Bienvenido a la pagina de ".session_name()."</p>";
+    echo "<p>Bienvenido a la pagina de ".$_SESSION['name']."</p>";
  echo"<div>Quieres jugar?</div>";   
     
 }
