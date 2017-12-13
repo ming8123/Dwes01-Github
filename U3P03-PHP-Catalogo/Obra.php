@@ -1,11 +1,14 @@
 <?php
 class Obra{
-    public $ID,$ID_autor,$Genero,$Nombre_obra,$imagen;
+    public $ID,$ID_autor,$Genero,$Nombre_obra,$Imagen;
   
 
+ 
+
+   
     public function getImagen()
     {
-        return $this->imagen;
+        return $this->Imagen;
     }
 
     public function getID()
