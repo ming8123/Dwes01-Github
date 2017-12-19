@@ -98,6 +98,7 @@ if(isset($_POST['enviar'])){
                 $fila=$autor->fetch_assoc();
                 echo "<td>".$fila['Nombre']."</td>";
                 echo "<td><img src='img/".$obra->getImagen()."'></td>\n";
+                echo "img/".$obra->getImagen();
                 echo "</tr>";   
             }          
            
@@ -159,15 +160,18 @@ mysqli_close($conexion);
             mysqli_free_result($autor);
         }
         }
-        
-    
-    
+         
+    ?>
+    <div align="center"><a href='mostrarCatalogo01.php'><button>volver</button>
+    </a></div>
+  <?php 
 }
 }
-    
-    
-
 ?>
+
+ 
 </div>
+    
+   
 </body>
 </html>

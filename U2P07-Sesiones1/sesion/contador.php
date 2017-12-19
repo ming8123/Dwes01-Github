@@ -2,6 +2,7 @@
 if(session_status() == PHP_SESSION_NONE) {
     session_name("idSession01");
 	session_start();
+
 }
 
 if (isset($_REQUEST["reiniciarContador"])) {
